@@ -7,7 +7,7 @@ services:
     build: ./
     tty: true
     stdin_open: true
-    command: bash
+    command: bash -c "npm install && npm start"
     restart: always
     working_dir: /app
     volumes:

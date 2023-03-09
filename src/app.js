@@ -1,11 +1,9 @@
 const express = require('express');
-const carRouter = require('./routes/cars');
-const errorHandler = require('./middleware/error');
+const products = require('./routes');
 
 const app = express();
 
 app.use(express.json());
-app.use(carRouter);
-app.use(errorHandler);
+app.use(products);
 
-export default app;
+module.exports = app;
