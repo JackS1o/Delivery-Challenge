@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "4.17.1",
     "mongoose": "6.1.8",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "dotenv": "16.0.0"
