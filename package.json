@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "dropdb": "mongo Delivery --eval 'db.dropDatabase()'"
   },
   "keywords": [],
   "author": "",
