@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Bicicleta",
+    "price": 1200.00,
+    "description": "Bicicleta Caloi 10",
+    "quantity": 5
+  },
+  {
+    "name": "Motorola Moto G",
+    "price": 800.00,
+    "description": "Smartphone Motorola Moto G",
+    "quantity": 2
+  },
+  {
+    "name": "TV 32",
+    "price": 1800.00,
+    "description": "TV 32 polegadas",
+    "quantity": 1
+  },
+  {
+    "name": "Notebook",
+    "price": 2500.00,
+    "description": "Notebook Dell",
+    "quantity": 10
+  },
+  {
+    "name": "Geladeira",
+    "price": 700.00,
+    "description": "Geladeira Brastemp",
+    "quantity": 3
+  },
+  {
+    "name": "Fogão",
+    "price": 950.00,
+    "description": "Fogão 4 bocas Brastemp",
+    "quantity": 1
+  }
+]

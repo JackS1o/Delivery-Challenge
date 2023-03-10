@@ -20,7 +20,7 @@ services:
       - MONGO_URI=mongodb://mongodb:27017/Delivery
 
   mongodb:
-    image: mongo:5.0.7
+    image: mongo:5.0.3
     container_name: delivery_db
     volumes:
       - ./:/app
