@@ -1,17 +1,24 @@
 const orderModel = require("../models/ordersModel");
 
 const createOrder = async (body, auth) => {
-  const order = await Promise.all(body.map((item) => {
+  const { paymentMethod, address, order } = body;
+  const orders = await Promise.all(order.map((item) => {
     const { name, quantity, description, price } = item;
-    return orderModel.create({
-      user: auth,
+    const orderList = {
       name,
       quantity,
       description,
       price,
-    });
+    }
+    return orderList;
   }));
-  return order;
+  const newOrder = await orderModel.create({
+    user: auth,
+    paymentMethod,
+    address,
+    order: orders,
+  });
+  return newOrder;
 };
 
 module.exports = {

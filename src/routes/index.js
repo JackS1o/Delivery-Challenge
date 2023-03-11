@@ -8,7 +8,7 @@ const {
   validateLogin,
   validateProductsFields,
 } = require("../middleware/validateFields");
-const { orderExists, invalidQuantity } = require("../middleware/orderValidation");
+const { productExists, invalidQuantity } = require("../middleware/orderValidation");
 
 const router = Router();
 
@@ -18,7 +18,7 @@ router.get("/products", authToken, productController.getAllProducts);
 router.post(
   "/mvp/order",
   authToken,
-  orderExists,
+  productExists,
   invalidQuantity,
   orderController.createOrder
 );

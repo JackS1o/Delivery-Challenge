@@ -2,6 +2,7 @@ require('dotenv/config');
 const products = require('../data/productSeed.js');
 const Product = require('../models/productsModel.js');
 const Order = require('../models/ordersModel.js');
+const User = require('../models/userModel.js');
 const connectDB = require('../config/connection.js');
 
 
@@ -25,6 +26,7 @@ const deleteProducts = async () => {
 	try {
 		await Product.deleteMany();
 		await Order.deleteMany();
+		await User.deleteMany();
 
 		console.log('Data destroyed');
 		process.exit();

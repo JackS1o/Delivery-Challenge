@@ -1,13 +1,13 @@
 const productModel = require("../models/productsModel");
 
-const orderExists = async (req, res, next) => {
-  const { body } = req;
+const productExists = async (req, res, next) => {
+  const { order } = req.body;
   let inexistentProduct = [];
   await Promise.all(
-    body.map(async (item) => {
+    order.map(async (item) => {
       const { name } = item;
-      const order = await productModel.findOne({ name });
-      if (!order) {
+      const existOrder = await productModel.findOne({ name });
+      if (!existOrder) {
         inexistentProduct.push(item);
       }
     })
@@ -21,10 +21,10 @@ const orderExists = async (req, res, next) => {
 };
 
 const invalidQuantity = async (req, res, next) => {
-  const { body } = req;
+  const { order } = req.body;
   let invalidQuantity = 0;
   await Promise.all(
-    body.map(async (item) => {
+    order.map(async (item) => {
       invalidQuantity += item.quantity;
     })
   );
@@ -37,6 +37,6 @@ const invalidQuantity = async (req, res, next) => {
 };
 
 module.exports = {
-  orderExists,
+  productExists,
   invalidQuantity,
 };
