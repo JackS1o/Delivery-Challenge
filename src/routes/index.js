@@ -3,13 +3,21 @@ const { authToken } = require("../middleware/tokenValidation");
 
 const userController = require("../controllers/userController");
 const productController = require("../controllers/productController");
+const {
+  validateLogin,
+  validateProductsFields,
+} = require("../middleware/validateFields");
+const orderController = require("../controllers/ordersController");
 
 const router = Router();
 
-router.post("/register", userController.createUser);
-router.post("/login", authToken, userController.login);
-router.get("/products", productController.getAllProducts);
-router.post("/mvp/products", productController.createProduct);
-
+router.post("/register", validateLogin, userController.createUser);
+router.post("/login", validateLogin, userController.login);
+router.get("/products", authToken, productController.getAllProducts);
+router.post(
+  "/order",
+  authToken,
+  orderController.createOrder
+);
 
 module.exports = router;

@@ -4,14 +4,14 @@ const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = process.env;
 
 const generateToken = (email) => {
-  const token = jwt.sign({ email }, JWT_SECRET || "secret", { expiresIn: "7d" });
+  const token = jwt.sign({ email }, JWT_SECRET || "secret", { expiresIn: "1h" });
   return token;
 };
 
 const createUser = async (req, res) => {
   const { email, password } = req.body;
   const user = await userService.createUser(email, password);
-  if (!user) return res.status(400).json({ message: "Invalid fields" });
+  if (!user) return res.status(400).json({ message: "Email already exists" });
 
   const token = generateToken(email);
 
