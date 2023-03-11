@@ -9,6 +9,7 @@ const router = Router();
 router.post("/register", userController.createUser);
 router.post("/login", authToken, userController.login);
 router.get("/products", productController.getAllProducts);
-router.post("/products", productController.createProduct);
+router.post("/mvp/products", productController.createProduct);
+
 
 module.exports = router;

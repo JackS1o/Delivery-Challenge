@@ -5,12 +5,15 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "dropdb": "mongo Delivery --eval 'db.dropDatabase()'"
+    "seed": "node src/seed/productSeed.js",
+    "products:import": "node src/config/seeder",
+    "products:destroy": "node src/config/seeder -d"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.3.4",
     "express": "4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "6.1.8",

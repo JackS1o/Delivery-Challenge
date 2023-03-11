@@ -12,7 +12,7 @@ const createProduct = async (req, res) => {
   const product = await productService.createProduct(body);
 
   if (!product) return res.status(400).json({ message: 'Invalid entries. Try again.' });
-
+  
   return res.status(201).json(product);
 }
 
