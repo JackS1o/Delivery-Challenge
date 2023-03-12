@@ -26,7 +26,13 @@ const getUserOrders = async (auth) => {
   return orders;
 }
 
+const updateOrder = async (id, body) => {
+  const updatedorder = await orderModel.updateOne({ _id: id }, body);
+  return updatedorder;
+}
+
 module.exports = {
   createOrder,
   getUserOrders,
+  updateOrder,
 };

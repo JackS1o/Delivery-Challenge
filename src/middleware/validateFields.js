@@ -15,23 +15,31 @@ const validateLogin = (req, res, next) => {
   next();
 };
 
-const validateProductsFields = (req, res, next) => {
-  const { name, price, description } = req.body;
+const validateOrderFields = (req, res, next) => {
+  const { paymentMethod, address, order } = req.body;
 
   const schema = Joi.object({
-    name: Joi.string().required(),
-    price: Joi.number().required(),
-    description: Joi.string().required(),
+    paymentMethod: Joi.string().required(),
+    address: Joi.string().required(),
+    order: Joi.array().items(
+      Joi.object({
+        _id: Joi.string().required(),
+        name: Joi.string().required(),
+        quantity: Joi.number().required(),
+        description: Joi.string().required(),
+        price: Joi.number().required(),
+      })
+    ),
   });
 
-  const { error } = schema.validate({ name, price, description });
+  const { error } = schema.validate({ paymentMethod, address, order });
 
   if (error) return res.status(400).json({ message: error.details[0].message });
 
   next();
-}
+};
 
 module.exports = {
   validateLogin,
-  validateProductsFields,
+  validateOrderFields,
 };
