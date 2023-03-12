@@ -16,6 +16,13 @@ const getUserOrders = async (req, res) => {
   return res.status(200).json(orders);
 };
 
+const getUserOrdersById = async (req, res) => {
+  const { id } = req.params;
+  const order = await ordersService.getUserOrdersById(id);
+  if (!order) return res.status(404).json({ message: "Order not found" });
+  return res.status(200).json(order);
+};
+
 const updateOrder = async (req, res) => {
   const { id } = req.params;
   const { body } = req;
@@ -36,6 +43,7 @@ const deleteOrder = async (req, res) => {
 module.exports = {
   createOrder,
   getUserOrders,
+  getUserOrdersById,
   updateOrder,
   deleteOrder,
 };

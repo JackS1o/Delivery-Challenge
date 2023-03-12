@@ -26,13 +26,19 @@ const getUserOrders = async (auth) => {
   return orders;
 }
 
+const getUserOrdersById = async (id) => {
+  const order = await orderModel.findOne({ _id: id });
+  if (!order) return null;
+  return order;
+}
+
 const updateOrder = async (id, body) => {
   const updatedorder = await orderModel.updateOne({ _id: id }, body);
   return updatedorder;
 }
 
 const deleteOrder = async (id) => {
-  const order = await orderModel.findOne({ _id: id });
+  const order = await getUserOrdersById(id);
   if (!order) return null;
   await orderModel.deleteOne({ _id: id });
   return order;
@@ -41,6 +47,7 @@ const deleteOrder = async (id) => {
 module.exports = {
   createOrder,
   getUserOrders,
+  getUserOrdersById,
   updateOrder,
   deleteOrder,
 };

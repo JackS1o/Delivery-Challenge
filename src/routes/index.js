@@ -24,6 +24,8 @@ router.get("/products", authToken, productController.getAllProducts);
 
 router.get("/user/orders", authToken, orderController.getUserOrders);
 
+router.get("/user/orders/:id", authToken, orderController.getUserOrdersById);
+
 router.post(
   "/mvp/order",
   authToken,
