@@ -21,6 +21,12 @@ const createOrder = async (body, auth) => {
   return newOrder;
 };
 
+const getUserOrders = async (auth) => {
+  const orders = await orderModel.find({ user: auth });
+  return orders;
+}
+
 module.exports = {
   createOrder,
+  getUserOrders,
 };

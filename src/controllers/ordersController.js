@@ -9,6 +9,14 @@ const createOrder = async (req, res) => {
   return res.status(201).json({ message: 'Sale created successfully!' });
 }
 
+const getUserOrders = async (req, res) => {
+  const { auth } = req;
+  const orders = await ordersService.getUserOrders(auth);
+
+  return res.status(200).json(orders);
+}
+
 module.exports = {
   createOrder,
+  getUserOrders,
 };
