@@ -31,8 +31,16 @@ const updateOrder = async (id, body) => {
   return updatedorder;
 }
 
+const deleteOrder = async (id) => {
+  const order = await orderModel.findOne({ _id: id });
+  if (!order) return null;
+  await orderModel.deleteOne({ _id: id });
+  return order;
+}
+
 module.exports = {
   createOrder,
   getUserOrders,
   updateOrder,
+  deleteOrder,
 };
