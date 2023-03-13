@@ -184,7 +184,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
     <strong>Testes</strong>
   </summary><br>
 
-  - Para executar os testes, execute o comando `npm run test` na raíz do projeto.
+  - Para executar os testes, execute o comando `npm test` na raíz do projeto.
   - Os testes foram desenvolvidos utilizando `Mocha`, `Jest`, `Chai` e `Sinon`.
   - Os testes foram desenvolvidos para as camadas de `Controller` do projeto.
 </details>
