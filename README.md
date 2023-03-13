@@ -2,7 +2,7 @@
 
 ## O que foi desenvolvido
 
-Neste projeto, foi desenvolvida uma API para um sistema de delivery de comida. O sistema possui um banco de dados com informações de produtos e usuários, e permite que usuários façam pedidos de produtos cadastrados no banco de dados.
+Neste projeto, foi desenvolvido uma API para um sistema de delivery de comida. O sistema possui um banco de dados com informações de produtos e usuários, e permite que usuários façam pedidos de produtos cadastrados no banco de dados.
 
 A API permite obter produtos disponíveis para compra e manipular a sacola do usuário, incluindo a inserção, escolha de quantidades e remoção de itens. Para a Fase 1, onde o EnaFood possuía cerca de 100 usuários, cada um fazendo em média 5 pedidos por mês, a API foi desenvolvida com a capacidade de gerenciar pedidos com 1 a 5 produtos.
 
@@ -185,7 +185,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   </summary><br>
 
   - Para executar os testes, execute o comando `npm run test` na raíz do projeto.
-  - Os testes foram desenvolvidos utilizando o `Mocha`, `Jest`, `Chai` e `Sinon`.
+  - Os testes foram desenvolvidos utilizando `Mocha`, `Jest`, `Chai` e `Sinon`.
   - Os testes foram desenvolvidos para as camadas de `Controller` do projeto.
 </details>
 
