@@ -5,9 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "npx mocha src/tests/unit/controllers",
-    "test:mocha": "nyc --all --include models --include services --include controllers mocha tests/unit/**/*.js --exit",
     "start": "nodemon index.js",
-    "seed": "node src/seed/productSeed.js",
     "products:import": "node src/config/seeder",
     "products:destroy": "node src/config/seeder -d"
   },
