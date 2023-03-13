@@ -143,5 +143,30 @@
     ]
   }
   ```
-  ```
+</details>
+
+<details>
+  <summary>
+    <strong>Testes</strong>
+  </summary><br>
+
+  - Para executar os testes, execute o comando `npm run test` na raíz do projeto.
+  - Os testes foram desenvolvidos utilizando o `Mocha`, `Jest`, `Chai` e `Sinon`.
+  - Os testes foram desenvolvidos para as camadas de `Controller` do projeto.
+</details>
+
+<details>
+  <summary>
+    <strong>Observações</strong>
+  </summary><br>
+
+  - O projeto foi desenvolvido utilizando o `Docker` para a criação de containers.
+  - O projeto foi desenvolvido utilizando o `Node.js` e `MongoDB`.
+  - O projeto foi desenvolvido utilizando o `Express` para a criação das rotas.
+  - O projeto foi desenvolvido utilizando o `Mongoose` para a conexão com o banco de dados.
+  - O projeto foi desenvolvido utilizando o `JWT` para a autenticação de usuários.
+  - O projeto foi desenvolvido utilizando o `Jest` para a realização dos testes.
+  - O projeto foi desenvolvido utilizando o `Joi` para a validação de dados.
+  - O projeto foi desenvolvido utilizando o `Express Async Errors` para a tratativa de erros.
+  - O projeto foi desenvolvido utilizando o `Dotenv` para a utilização de variáveis de ambiente.
 </details>
