@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "test": "npx mocha src/tests/unit/controllers",
+    "test:mocha": "nyc --all --include models --include services --include controllers mocha tests/unit/**/*.js --exit",
     "start": "nodemon index.js",
     "seed": "node src/seed/productSeed.js",
     "products:import": "node src/config/seeder",
@@ -21,6 +23,10 @@
     "nodemon": "^2.0.19"
   },
   "devDependencies": {
-    "dotenv": "16.0.0"
+    "dotenv": "16.0.0",
+    "chai": "^4.3.4",
+    "jest": "^26.4.1",
+    "mocha": "^8.4.0",
+    "sinon": "^11.1.1"
   }
 }
