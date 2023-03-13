@@ -157,6 +157,25 @@
 
 <details>
   <summary>
+    <strong>Middlewares</strong>
+  </summary><br>
+
+  - `errorHandler` - Middleware que captura os erros e retorna uma mensagem de erro.
+  - `authToken` - Middleware que verifica se o usuário está autenticado. Caso não esteja, retorna um erro.
+  - `validateLogin` - Middleware que verifica se os dados enviados pelo usuário ao realizar o login ou se registrar estão corretos. Caso não estejam, retorna um erro.
+  - `validateOrderFields` - Middleware que verifica se os dados enviados pelo usuário ao realizar uma nova ordem de compra estão corretos. Caso não estejam, retorna um erro.
+  - `productExists` - Middleware que verifica se o produto enviado pelo usuário ao realizar uma nova ordem de compra existe. Caso não exista, retorna um erro.
+  - `invalidQuantityMVP` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao realizar uma nova ordem de compra na rota `/mvp/order` é válida. Caso não seja, retorna um erro.
+  - `invalidQuantityEarlyAdop` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao realizar uma nova ordem de compra na rota `/earlyadopters/order` é válida. Caso não seja, retorna um erro.
+  - `invalidQuantityEarlyMajor` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao realizar uma nova ordem de compra na rota `/earlymajority/order` é válida. Caso não seja, retorna um erro.
+  - `invalidUpdatedQuantityMVP` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao atualizar uma ordem de compra na rota `/mvp/order/:id` é válida. Caso não seja, retorna um erro.
+  - `invalidUpdatedQuantityEarlyAdop` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao atualizar uma ordem de compra na rota `/earlyadopters/order/:id` é válida. Caso não seja, retorna um erro.
+  - `invalidUpdatedQuantityEarlyMajor` - Middleware que verifica se a quantidade de produtos enviados pelo usuário ao atualizar uma ordem de compra na rota `/earlymajority/order/:id` é válida. Caso não seja, retorna um erro.
+  - `invalidUpdatedFields` - Middleware que verifica se os dados enviados pelo usuário ao atualizar uma ordem de compra estão corretos. Caso não estejam, retorna um erro.
+</details>
+
+<details>
+  <summary>
     <strong>Observações</strong>
   </summary><br>
 
