@@ -28,7 +28,7 @@ const getUserOrders = async (auth) => {
 
 const getUserOrdersById = async (id) => {
   const order = await orderModel.findOne({ _id: id });
-  if (!order) return null;
+  if (!order) throw new Error("404|Order not found");
   return order;
 }
 
@@ -39,7 +39,7 @@ const updateOrder = async (id, body) => {
 
 const deleteOrder = async (id) => {
   const order = await getUserOrdersById(id);
-  if (!order) return null;
+  if (!order) throw new Error("404|Order not found");
   await orderModel.deleteOne({ _id: id });
   return order;
 }

@@ -1,6 +1,6 @@
 const productModel = require("../models/productsModel");
 
-const productExists = async (req, res, next) => {
+const productExists = async (req, _res, next) => {
   const { order } = req.body;
   let inexistentProduct = [];
   await Promise.all(
@@ -13,14 +13,16 @@ const productExists = async (req, res, next) => {
     })
   );
   if (inexistentProduct.length) {
-    return res
-      .status(404)
-      .json({ message: "Product not found", inexistentProduct });
+    throw new Error(
+      `404|The following products do not exist: ${
+        inexistentProduct && inexistentProduct.map((item) => item.name)
+      }`
+    );
   }
   next();
 };
 
-const invalidQuantity = async (req, res, next) => {
+const invalidQuantity = async (req, _res, next) => {
   const { order } = req.body;
   let invalidQuantity = 0;
   await Promise.all(
@@ -29,9 +31,7 @@ const invalidQuantity = async (req, res, next) => {
     })
   );
   if (invalidQuantity > 5) {
-    return res
-      .status(400)
-      .json({ message: "Maxmimum allowed items per order is five" });
+    throw new Error(`400|Maxmimum allowed items per order is five.`);
   }
   next();
 };

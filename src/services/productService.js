@@ -5,12 +5,6 @@ const getAllProducts = async () => {
   return products;
 };
 
-const createProduct = async (body) => {
-  const product = await productModel.create(body);
-  return product;
-};
-
 module.exports = {
   getAllProducts,
-  createProduct,
 };

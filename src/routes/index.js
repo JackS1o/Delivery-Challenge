@@ -24,7 +24,7 @@ router.get("/products", authToken, productController.getAllProducts);
 
 router.get("/user/orders", authToken, orderController.getUserOrders);
 
-router.get("/user/orders/:id", authToken, orderController.getUserOrdersById);
+router.get("/user/order/:id", authToken, orderController.getUserOrdersById);
 
 router.post(
   "/mvp/order",
@@ -36,13 +36,13 @@ router.post(
 );
 
 router.patch(
-  "mvp/user/orders/:id",
+  "/mvp/user/order/:id",
   authToken,
   invalidUpdatedQuantity,
   invalidUpdatedFields,
   orderController.updateOrder
 );
 
-router.delete("/user/orders/:id", authToken, orderController.deleteOrder);
+router.delete("/user/order/:id", authToken, orderController.deleteOrder);
 
 module.exports = router;

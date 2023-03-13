@@ -10,8 +10,7 @@ const generateToken = (email) => {
 
 const createUser = async (req, res) => {
   const { email, password } = req.body;
-  const user = await userService.createUser(email, password);
-  if (!user) return res.status(400).json({ message: "Email already exists" });
+  await userService.createUser(email, password);
 
   const token = generateToken(email);
 
@@ -20,8 +19,7 @@ const createUser = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-  const user = await userService.login(email, password);
-  if (!user) return res.status(401).json({ message: "Incorrect email or password" });
+  await userService.login(email, password);
 
   const token = generateToken(email);
 
