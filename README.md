@@ -97,12 +97,6 @@
         "name": "Coca-Cola",
         "price": 5,
         "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
-      },
-      {
-        "_id": "640ebdb605aaccc707ab1508",
-        "name": "Pepsi",
-        "price": 5,
-        "description": "Pepsi is a carbonated soft drink manufactured by PepsiCo."
       }
     ]
   }
@@ -116,21 +110,25 @@
       "_id": "640e204bff9bfc2adbe8933f",
       "user": "ja@gmail.com",
       "paymentMethod": "cartão",
-      "address": "Rua lallala",
+      "address": "Rua São Miguel",
       "order": [
         {
-          "name": "Bicicleta",
-          "quantity": 2,
-          "description": "Bicicleta Caloi 10",
-          "price": 1200,
-          "_id": "640c1d53454e63952305fd9f"
+          "_id": "640ebdb605aaccc707ab1507",
+          "name": "Coca-Cola",
+          "price": 5,
+          "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
         }
       ]
     }
   }
   ```
 
-  - `POST /orders` - Cria uma nova ordem de compra. O corpo da requisição deve conter o método de pagamento, o endereço e um array de produtos, onde cada produto deve conter o `id`, `name`, `price` e `description` desejada. Exemplo de corpo de requisição:
+  - `POST /mvp/order` - é possível criar uma nova ordem de compra, porém, nessa rota, o usuário consegue criar uma ordem com no `máximo 5 produtos`.
+  - `POST /earlyadopters/order` - é possível criar uma nova ordem de compra, porém, nessa rota, o usuário consegue criar uma ordem com no `máximo 15 produtos`.
+  - `POST /earlymajority/order` - é possível criar uma nova ordem de compra, porém, nessa rota, o usuário consegue criar uma ordem com no `máximo 20 produtos`.
+  - `POST /latemajority/order` - é possível criar uma nova ordem de compra sem limite de produtos.
+  - Todas as rotas de criação de ordem de compra recebem o seguinte corpo de requisição:
+
   ```json
   {
     "paymentMethod": "cartão",
@@ -141,12 +139,6 @@
         "name": "Coca-Cola",
         "price": 5,
         "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
-      },
-      {
-        "_id": "640ebdb605aaccc707ab1508",
-        "name": "Pepsi",
-        "price": 5,
-        "description": "Pepsi is a carbonated soft drink manufactured by PepsiCo."
       }
     ]
   }
