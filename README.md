@@ -220,8 +220,8 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   - `Express` para a criação das rotas.
   - `Mongoose` para a conexão com o banco de dados.
   - `JWT` para a autenticação de usuários.
-  - `Jest` para a realização dos testes.
-  - `Mocha`, `Jest`, `Chai` e `Sinon` para a validação de dados.
+  - `Mocha`, `Jest`, `Chai` e `Sinon` para a realização dos testes.
+  - `Joi` para a validação de dados.
   - `Express Async Errors` para a tratativa de erros.
   - `Dotenv` para a utilização de variáveis de ambiente.
 </details>
