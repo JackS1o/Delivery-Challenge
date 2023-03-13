@@ -1,5 +1,16 @@
 # Boas-vindas ao repositório do projeto ENAFOOD!
 
+## O que foi desenvolvido
+
+Neste projeto, foi desenvolvida uma API para um sistema de delivery de comida. O sistema possui um banco de dados com informações de produtos e usuários, e permite que usuários façam pedidos de produtos cadastrados no banco de dados.
+
+A API permite obter produtos disponíveis para compra e manipular a sacola do usuário, incluindo a inserção, escolha de quantidades e remoção de itens. Para a Fase 1, onde o EnaFood possuía cerca de 100 usuários, cada um fazendo em média 5 pedidos por mês, a API foi desenvolvida com a capacidade de gerenciar pedidos com 1 a 5 produtos.
+
+Na Fase 2, que contava com cerca de 10.000 usuários e uma média de 10 pedidos por mês, a API foi atualizada para lidar com pedidos que continham de 1 a 15 produtos. Na Fase 3, que contava com cerca de 1.000.000 de usuários e uma média de 25 pedidos por mês, a API foi novamente atualizada para lidar com pedidos que continham de 1 a 20 produtos.
+
+Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery do Brasil, com cerca de 50.000.000 de usuários, a API passou por uma última atualização para lidar com pedidos que também eram feitos por empresas, com um grande volume de produtos e preços mais em conta.
+
+
 <details>
   <summary>
     <strong>Como executar o projeto</strong>
