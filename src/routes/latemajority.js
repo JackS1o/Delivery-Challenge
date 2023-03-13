@@ -20,7 +20,7 @@ latemajorityRouter.post(
 );
 
 latemajorityRouter.patch(
-  "/latemajority/user/order/:id",
+  "/latemajority/order/:id",
   authToken,
   invalidUpdatedFields,
   orderController.updateOrder

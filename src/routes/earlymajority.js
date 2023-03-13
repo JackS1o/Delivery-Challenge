@@ -23,7 +23,7 @@ earlymajorityRouter.post(
 );
 
 earlymajorityRouter.patch(
-  "/earlymajority/user/order/:id",
+  "/earlymajority/order/:id",
   authToken,
   invalidUpdatedFields,
   invalidUpdatedQuantityEarlyMajor,

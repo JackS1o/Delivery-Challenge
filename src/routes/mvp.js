@@ -23,7 +23,7 @@ mvpRouter.post(
 );
 
 mvpRouter.patch(
-  "/mvp/user/order/:id",
+  "/mvp/order/:id",
   authToken,
   invalidUpdatedQuantityMVP,
   invalidUpdatedFields,

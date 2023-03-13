@@ -23,7 +23,7 @@ earlyAdoptersRouter.post(
 );
 
 earlyAdoptersRouter.patch(
-  "/earlyadopters/user/order/:id",
+  "/earlyadopters/order/:id",
   authToken,
   invalidUpdatedFields,
   invalidUpdatedQuantityEarlyAdop,
