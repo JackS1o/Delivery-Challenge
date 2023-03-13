@@ -1,48 +1,19 @@
-const { Router } = require("express");
+const loginRouter = require("./login"); 
+const mvpRouter = require("./mvp");
+const earlyAdoptersRouter = require("./earlyadopters");
+const earlymajorityRouter = require("./earlymajority");
+const latemajorityRouter = require("./latemajority");
+const ordersRouter = require("./orders");
+const productsRouter = require("./products");
 
-const userController = require("../controllers/userController");
-const productController = require("../controllers/productController");
-const orderController = require("../controllers/ordersController");
+const routes = {
+  loginRouter,
+  mvpRouter,
+  earlyAdoptersRouter,
+  earlymajorityRouter,
+  latemajorityRouter,
+  ordersRouter,
+  productsRouter,
+};
 
-const {
-  validateLogin,
-  productExists,
-  invalidQuantity,
-  authToken,
-  validateOrderFields,
-  invalidUpdatedQuantity,
-  invalidUpdatedFields,
-} = require("../middleware");
-
-const router = Router();
-
-router.post("/register", validateLogin, userController.createUser);
-
-router.post("/login", validateLogin, userController.login);
-
-router.get("/products", authToken, productController.getAllProducts);
-
-router.get("/user/orders", authToken, orderController.getUserOrders);
-
-router.get("/user/order/:id", authToken, orderController.getUserOrdersById);
-
-router.post(
-  "/mvp/order",
-  authToken,
-  productExists,
-  invalidQuantity,
-  validateOrderFields,
-  orderController.createOrder
-);
-
-router.patch(
-  "/mvp/user/order/:id",
-  authToken,
-  invalidUpdatedQuantity,
-  invalidUpdatedFields,
-  orderController.updateOrder
-);
-
-router.delete("/user/order/:id", authToken, orderController.deleteOrder);
-
-module.exports = router;
+module.exports = routes;
