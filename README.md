@@ -191,7 +191,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
 
 <details>
   <summary>
-    <strong>Middlewares</strong>
+    <strong>Desenvolvimento</strong>
   </summary><br>
 
   - O projeto foi desenvolvido utilizando arquitetura MSC e também `middlewares` para verificar se os dados enviados pelo usuário estão corretos, se o usuário está autenticado, se o produto enviado pelo usuário existe, se a quantidade de produtos enviados pelo usuário é válida, entre outros.
