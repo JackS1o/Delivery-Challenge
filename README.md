@@ -82,13 +82,15 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
           "_id": "640ebdb605aaccc707ab1507",
           "name": "Coca-Cola",
           "price": 5,
-          "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+          "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+          "quantity": 2
         },
         {
           "_id": "640ebdb605aaccc707ab1508",
           "name": "Pepsi",
           "price": 5,
-          "description": "Pepsi is a carbonated soft drink manufactured by PepsiCo."
+          "description": "Pepsi is a carbonated soft drink manufactured by PepsiCo.",
+          "quantity": 2
         }
       ]
     }
@@ -107,7 +109,8 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
         "_id": "640ebdb605aaccc707ab1507",
         "name": "Coca-Cola",
         "price": 5,
-        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+        "quantity": 2
       }
     ]
   }
@@ -119,7 +122,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
     "message": "Sale deleted successfully!",
     "order": {
       "_id": "640e204bff9bfc2adbe8933f",
-      "user": "ja@gmail.com",
+      "user": "jack@gmail.com",
       "paymentMethod": "cartão",
       "address": "Rua São Miguel",
       "order": [
@@ -127,7 +130,8 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
           "_id": "640ebdb605aaccc707ab1507",
           "name": "Coca-Cola",
           "price": 5,
-          "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+          "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+          "quantity": 2
         }
       ]
     }
@@ -149,7 +153,8 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
         "_id": "640ebdb605aaccc707ab1507",
         "name": "Coca-Cola",
         "price": 5,
-        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+        "quantity": 2
       }
     ]
   }
@@ -165,7 +170,8 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
         "_id": "640ebdb605aaccc707ab1507",
         "name": "Coca-Cola",
         "price": 5,
-        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+        "quantity": 2
       }
     ]
   }
@@ -204,7 +210,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
 
 <details>
   <summary>
-    <strong>Observações</strong>
+    <strong>Tecnologias utilizadas</strong>
   </summary><br>
 
   - O projeto foi desenvolvido utilizando o `Docker` para a criação de containers.
