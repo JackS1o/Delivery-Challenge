@@ -5,10 +5,10 @@ const orderController = require("../controllers/ordersController");
 const {
   authToken,
   productExists,
-  invalidQuantity,
   validateOrderFields,
-  invalidUpdatedQuantity,
   invalidUpdatedFields,
+  invalidUpdatedQuantityEarlyMajor,
+  invalidQuantityEarlyMajor,
 } = require("../middleware");
 
 const earlymajorityRouter = Router();
@@ -17,16 +17,16 @@ earlymajorityRouter.post(
   "/earlymajority/order",
   authToken,
   productExists,
-  invalidQuantity,
   validateOrderFields,
+  invalidQuantityEarlyMajor,
   orderController.createOrder
 );
 
 earlymajorityRouter.patch(
   "/earlymajority/user/order/:id",
   authToken,
-  invalidUpdatedQuantity,
   invalidUpdatedFields,
+  invalidUpdatedQuantityEarlyMajor,
   orderController.updateOrder
 );
 

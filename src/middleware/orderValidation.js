@@ -22,21 +22,52 @@ const productExists = async (req, _res, next) => {
   next();
 };
 
-const invalidQuantity = async (req, _res, next) => {
-  const { order } = req.body;
-  let invalidQuantity = 0;
+const invalidQuantity = async (order) => {
+  let quantity = 0;
   await Promise.all(
     order.map(async (item) => {
-      invalidQuantity += item.quantity;
+      quantity += item.quantity;
     })
   );
-  if (invalidQuantity > 5) {
-    throw new Error(`400|Maxmimum allowed items per order is five.`);
+  return quantity;
+};
+
+const invalidQuantityMVP = async (req, _res, next) => {
+  const { order } = req.body;
+  const result = await invalidQuantity(order);
+  if (result > 5) {
+    throw new Error(
+      "400|You can only update the quantity to a maximum of 5"
+    );
   }
   next();
-};
+}
+
+const invalidQuantityEarlyAdop = async (req, _res, next) => {
+  const { order } = req.body;
+  const result = await invalidQuantity(order);
+  if (result > 15) {
+    throw new Error(
+      "400|You can only update the quantity to a maximum of 15"
+    );
+  }
+  next();
+}
+
+const invalidQuantityEarlyMajor = async (req, _res, next) => {
+  const { order } = req.body;
+  const result = await invalidQuantity(order);
+  if (result > 20) {
+    throw new Error(
+      "400|You can only update the quantity to a maximum of 20"
+    );
+  }
+  next();
+}
 
 module.exports = {
   productExists,
-  invalidQuantity,
+  invalidQuantityMVP,
+  invalidQuantityEarlyAdop,
+  invalidQuantityEarlyMajor,
 };

@@ -1,16 +1,30 @@
-const { productExists, invalidQuantity } = require("./orderValidation");
+const {
+  productExists,
+  invalidQuantityMVP,
+  invalidQuantityEarlyAdop,
+  invalidQuantityEarlyMajor,
+} = require("./orderValidation");
 const { authToken } = require("./tokenValidation");
 const { validateLogin, validateOrderFields } = require("./validateFields");
-const { invalidUpdatedQuantity, invalidUpdatedFields } = require("./updateOrder");
+const {
+  invalidUpdatedQuantityMVP,
+  invalidUpdatedFields,
+  invalidUpdatedQuantityEarlyAdop,
+  invalidUpdatedQuantityEarlyMajor,
+} = require("./updateOrder");
 const { errorHandler } = require("./error");
 
 module.exports = {
   productExists,
-  invalidQuantity,
+  invalidQuantityMVP,
+  invalidQuantityEarlyAdop,
   authToken,
   validateLogin,
   validateOrderFields,
-  invalidUpdatedQuantity,
   invalidUpdatedFields,
   errorHandler,
+  invalidUpdatedQuantityMVP,
+  invalidUpdatedQuantityEarlyAdop,
+  invalidUpdatedQuantityEarlyMajor,
+  invalidQuantityEarlyMajor,
 };

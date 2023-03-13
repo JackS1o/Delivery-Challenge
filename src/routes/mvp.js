@@ -5,9 +5,9 @@ const orderController = require("../controllers/ordersController");
 const {
   authToken,
   productExists,
-  invalidQuantity,
+  invalidQuantityMVP,
   validateOrderFields,
-  invalidUpdatedQuantity,
+  invalidUpdatedQuantityMVP,
   invalidUpdatedFields,
 } = require("../middleware");
 
@@ -17,7 +17,7 @@ mvpRouter.post(
   "/mvp/order",
   authToken,
   productExists,
-  invalidQuantity,
+  invalidQuantityMVP,
   validateOrderFields,
   orderController.createOrder
 );
@@ -25,7 +25,7 @@ mvpRouter.post(
 mvpRouter.patch(
   "/mvp/user/order/:id",
   authToken,
-  invalidUpdatedQuantity,
+  invalidUpdatedQuantityMVP,
   invalidUpdatedFields,
   orderController.updateOrder
 );

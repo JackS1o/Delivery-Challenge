@@ -5,10 +5,10 @@ const orderController = require("../controllers/ordersController");
 const {
   authToken,
   productExists,
-  invalidQuantity,
+  invalidQuantityEarlyAdop,
   validateOrderFields,
-  invalidUpdatedQuantity,
   invalidUpdatedFields,
+  invalidUpdatedQuantityEarlyAdop,
 } = require("../middleware");
 
 const earlyAdoptersRouter = Router();
@@ -17,7 +17,7 @@ earlyAdoptersRouter.post(
   "/earlyadopters/order",
   authToken,
   productExists,
-  invalidQuantity,
+  invalidQuantityEarlyAdop,
   validateOrderFields,
   orderController.createOrder
 );
@@ -25,8 +25,8 @@ earlyAdoptersRouter.post(
 earlyAdoptersRouter.patch(
   "/earlyadopters/user/order/:id",
   authToken,
-  invalidUpdatedQuantity,
   invalidUpdatedFields,
+  invalidUpdatedQuantityEarlyAdop,
   orderController.updateOrder
 );
 
