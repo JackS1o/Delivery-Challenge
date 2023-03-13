@@ -216,12 +216,12 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   </summary><br>
 
   - O projeto foi desenvolvido utilizando o `Docker` para a criação de containers.
-  - O projeto foi desenvolvido utilizando o `Node.js` e `MongoDB`.
-  - O projeto foi desenvolvido utilizando o `Express` para a criação das rotas.
-  - O projeto foi desenvolvido utilizando o `Mongoose` para a conexão com o banco de dados.
-  - O projeto foi desenvolvido utilizando o `JWT` para a autenticação de usuários.
-  - O projeto foi desenvolvido utilizando o `Jest` para a realização dos testes.
-  - O projeto foi desenvolvido utilizando o `Joi` para a validação de dados.
-  - O projeto foi desenvolvido utilizando o `Express Async Errors` para a tratativa de erros.
-  - O projeto foi desenvolvido utilizando o `Dotenv` para a utilização de variáveis de ambiente.
+  - Linguagem `Node.js` e banco de dados `MongoDB`.
+  - `Express` para a criação das rotas.
+  - `Mongoose` para a conexão com o banco de dados.
+  - `JWT` para a autenticação de usuários.
+  - `Jest` para a realização dos testes.
+  - `Mocha`, `Jest`, `Chai` e `Sinon` para a validação de dados.
+  - `Express Async Errors` para a tratativa de erros.
+  - `Dotenv` para a utilização de variáveis de ambiente.
 </details>
