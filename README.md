@@ -143,7 +143,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   ```json
   {
     "paymentMethod": "cartão",
-    "address": "Rua lallala",
+    "address": "Rua São Miguel",
       "order": [
       {
         "_id": "640ebdb605aaccc707ab1507",
@@ -154,6 +154,23 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
     ]
   }
   ```
+
+  - As rotas `PATCH /mvp/order/:id`, `PATCH /earlyadopters/order/:id`, `PATCH /earlymajority/order/:id` e `PATCH /latemajority/order/:id` são responsáveis por atualizar uma ordem de compra específica. Todas as rotas recebem o seguinte corpo de requisição:
+  ```json
+  {
+    "paymentMethod": "cartão",
+    "address": "Rua São Miguel",
+      "order": [
+      {
+        "_id": "640ebdb605aaccc707ab1507",
+        "name": "Coca-Cola",
+        "price": 5,
+        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company."
+      }
+    ]
+  }
+  ```
+
 </details>
 
 <details>
