@@ -19,7 +19,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   1. Clone o repositório 
     `git clone git@github.com:JackS1o/Delivery-Challenge.git`
   
-  2. Na raíz do projeto, execute o comando `docker-compose up` para subir o container da aplicação e do banco de dados. O servidor estará disponível na porta `3001`.
+  2. Na raíz do projeto, execute o comando `docker-compose up -d` para subir o container da aplicação e do banco de dados. O servidor estará disponível na porta `3001`.
 
   3. Na raíz do projeto, execute o comando `npm run products:import` para popular o banco de dados com os produtos.
 </details>
