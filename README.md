@@ -194,7 +194,7 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
     <strong>Desenvolvimento</strong>
   </summary><br>
 
-  - O projeto foi desenvolvido utilizando arquitetura MSC e também `middlewares` para verificar se os dados enviados pelo usuário estão corretos, se o usuário está autenticado, se o produto enviado pelo usuário existe, se a quantidade de produtos enviados pelo usuário é válida, entre outros.
+  - O projeto foi desenvolvido utilizando arquitetura MSC (Model, Service e Controller) para uma melhor organização do código e também `middlewares` para verificar se os dados enviados pelo usuário estão corretos, se o usuário está autenticado, se o produto enviado pelo usuário existe, se a quantidade de produtos enviados pelo usuário é válida, entre outros.
 
   - `errorHandler` - Middleware que captura os erros e retorna uma mensagem de erro.
   - `authToken` - Middleware que verifica se o usuário está autenticado. Caso não esteja, retorna um erro.
