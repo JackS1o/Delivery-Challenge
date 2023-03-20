@@ -37,7 +37,7 @@ const invalidQuantityMVP = async (req, _res, next) => {
   const result = await invalidQuantity(order);
   if (result > 5) {
     throw new Error(
-      "400|You can only update the quantity to a maximum of 5"
+      "400|Maxmimum allowed items per order is 5"
     );
   }
   next();
@@ -48,7 +48,7 @@ const invalidQuantityEarlyAdop = async (req, _res, next) => {
   const result = await invalidQuantity(order);
   if (result > 15) {
     throw new Error(
-      "400|You can only update the quantity to a maximum of 15"
+      "400|Maxmimum allowed items per order is 15"
     );
   }
   next();
@@ -59,7 +59,7 @@ const invalidQuantityEarlyMajor = async (req, _res, next) => {
   const result = await invalidQuantity(order);
   if (result > 20) {
     throw new Error(
-      "400|You can only update the quantity to a maximum of 20"
+      "400|Maxmimum allowed items per order is 20"
     );
   }
   next();
