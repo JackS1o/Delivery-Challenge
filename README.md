@@ -97,6 +97,25 @@ Por fim, na Fase 4, onde o EnaFood havia se tornado a principal rede de delivery
   ]
   ```
 
+  - `GET /user/orders` - Retorna todas as ordens de compra de um usuário específico. Exemplo de resposta:
+  ```json
+  {
+    "_id": "640ebdb605aaccc707ab1507",
+    "user": "jack@gmail.com",
+    "paymentMethod": "cartão",
+    "address": "Rua São Miguel",
+    "order": [
+      {
+        "_id": "640ebdb605aaccc707ab1507",
+        "name": "Coca-Cola",
+        "price": 5,
+        "description": "Coca-Cola is a carbonated soft drink manufactured by The Coca-Cola Company.",
+        "quantity": 2
+      }
+    ]
+  }
+  ```
+
   - `GET /order/:id` - Retorna uma ordem de compra específica. Exemplo de resposta:
   ```json
   {
